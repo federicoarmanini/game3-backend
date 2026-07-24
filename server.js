@@ -14,7 +14,7 @@ const pool = new Pool({
   ssl: { rejectUnauthorized: false }
 });
 
-// Crea le tabelle se non esistono
+// Creates the tables  if not exist 
 async function initDB() {
   await pool.query(`
     CREATE TABLE IF NOT EXISTS players (
